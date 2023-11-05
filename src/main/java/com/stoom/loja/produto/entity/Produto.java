@@ -11,17 +11,17 @@ public class Produto {
         Long id;
         String nome;
         double preco;
-        boolean ativo;
+        boolean disponivel;
         String marca;
         String categoria;
 
         public Produto() {
         }
 
-        public Produto(String nome, double preco, boolean ativo, String marca, String categoria) {
+        public Produto(String nome, double preco, boolean disponivel, String marca, String categoria) {
                 this.nome = nome;
                 this.preco = preco;
-                this.ativo = ativo;
+                this.disponivel = disponivel;
                 this.marca = marca;
                 this.categoria = categoria;
         }
@@ -30,7 +30,7 @@ public class Produto {
                 return new Produto(
                         produtoDto.nome(),
                         produtoDto.preco(),
-                        produtoDto.ativo(),
+                        produtoDto.disponivel(),
                         produtoDto.marca(),
                         produtoDto.categoria()
                 );
@@ -60,12 +60,12 @@ public class Produto {
                 this.preco = preco;
         }
 
-        public boolean isAtivo() {
-                return ativo;
+        public boolean isDisponivel() {
+                return disponivel;
         }
 
-        public void setAtivo(boolean ativo) {
-                this.ativo = ativo;
+        public void setAtivo(boolean disponivel) {
+                this.disponivel = disponivel;
         }
 
         public String getMarca() {
