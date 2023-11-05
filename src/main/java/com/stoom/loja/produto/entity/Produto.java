@@ -19,7 +19,6 @@ public class Produto {
         }
 
         public Produto(String nome, double preco, boolean ativo, String marca, String categoria) {
-              //  this.id = id;
                 this.nome = nome;
                 this.preco = preco;
                 this.ativo = ativo;
@@ -29,7 +28,6 @@ public class Produto {
 
         public Produto fromDto(ProdutoDto produtoDto) {
                 return new Produto(
-                      //  this.id,
                         produtoDto.nome(),
                         produtoDto.preco(),
                         produtoDto.ativo(),

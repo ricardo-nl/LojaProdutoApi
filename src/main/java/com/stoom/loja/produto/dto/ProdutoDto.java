@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 public record ProdutoDto(
         @NotBlank(message = "O nome não pode estar em branco")
         String nome,
-        @DecimalMin(value = "0.0", inclusive = false, message = "O preço deve ser valido")
+        @DecimalMin(value = "0.0", inclusive = false, message = "O preço deve ser válido")
         double preco,
         @AssertTrue(message = "O produto deve estar ativo")
         boolean ativo,
