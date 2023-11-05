@@ -64,7 +64,7 @@ public class Produto {
                 return disponivel;
         }
 
-        public void setAtivo(boolean disponivel) {
+        public void setDisponivel(boolean disponivel) {
                 this.disponivel = disponivel;
         }
 

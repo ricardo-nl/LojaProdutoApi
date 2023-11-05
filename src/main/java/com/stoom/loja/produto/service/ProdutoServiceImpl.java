@@ -55,7 +55,7 @@ public class ProdutoServiceImpl implements ProdutoService{
         Produto produtoAlterado = produtoAtual.get();
         produtoAlterado.setNome(produtoDto.nome());
         produtoAlterado.setPreco(produtoDto.preco());
-        produtoAlterado.setAtivo(produtoDto.disponivel());
+        produtoAlterado.setDisponivel(produtoDto.disponivel());
         produtoAlterado.setMarca(produtoDto.marca());
         produtoAlterado.setCategoria(produtoDto.categoria());
 
