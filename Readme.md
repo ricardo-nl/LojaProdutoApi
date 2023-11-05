@@ -1,7 +1,5 @@
 # Projeto de teste para Stoom
 
-Aqui estão algumas informações importantes sobre o projeto.
-
 ## Descrição
 
 Este projeto é uma api de crud de produtos.
@@ -10,12 +8,11 @@ Este projeto é uma api de crud de produtos.
 
 - Java 17
 - Postgres
-- 
 
-# Instalação
+## Instalação
 
 O script para criação do database está na pasta 'resources'.
 
-# Testes
+## Testes
 
 Para rodar os testes, use a collection do postman que está na pasta 'resources'.
