@@ -44,18 +44,18 @@ public class ProdutoController {
     }
 
     @GetMapping("/all")
-    public List<Produto> getProdutoAll() {
-        return service.getProdutos();
+    public List<Produto> getAllProdutos() {
+        return service.getAllProdutos();
     }
 
     @GetMapping("/marca/{marca}")
-    public List<Produto> getProdutoAllByMarca(@PathVariable String marca) {
-        return service.getProdutosByMarca(marca);
+    public List<Produto> getAllProdutosAtivosByMarca(@PathVariable String marca) {
+        return service.getProdutosAtivosByMarca(marca);
     }
 
     @GetMapping("/categoria/{categoria}")
-    public List<Produto> getProdutoAllByCategoria(@PathVariable String categoria) {
-        return service.obterProdutosByCategoria(categoria);
+    public List<Produto> getAllProdutosAtivosByCategoria(@PathVariable String categoria) {
+        return service.getProdutosAtivosByCategoria(categoria);
     }
 
     @PutMapping("/{id}")

@@ -25,18 +25,18 @@ public class ProdutoServiceImpl implements ProdutoService{
     }
 
     @Override
-    public List<Produto> getProdutos() {
+    public List<Produto> getAllProdutos() {
         return repository.findAll();
     }
 
     @Override
-    public List<Produto> getProdutosByMarca(String marca) {
-        return repository.findAllByMarca(marca);
+    public List<Produto> getProdutosAtivosByMarca(String marca) {
+        return repository.findByAtivoIsTrueAndMarca(marca);
     }
 
     @Override
-    public List<Produto> obterProdutosByCategoria(String categoria) {
-        return repository.findAllByCategoria(categoria);
+    public List<Produto> getProdutosAtivosByCategoria(String categoria) {
+        return repository.findByAtivoIsTrueAndCategoria(categoria);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class ProdutoServiceImpl implements ProdutoService{
         Produto produtoAlterado = produtoAtual.get();
         produtoAlterado.setNome(produtoDto.nome());
         produtoAlterado.setPreco(produtoDto.preco());
-        produtoAlterado.setDisponivel(produtoDto.disponivel());
+        produtoAlterado.setAtivo(produtoDto.ativo());
         produtoAlterado.setMarca(produtoDto.marca());
         produtoAlterado.setCategoria(produtoDto.categoria());
 

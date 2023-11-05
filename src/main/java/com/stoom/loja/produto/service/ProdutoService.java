@@ -11,8 +11,8 @@ public interface ProdutoService {
     Produto createProduto(ProdutoDto produtoDto);
     Optional<Produto> getProdutoById(Long id);
     Optional<Produto> updateProduto(Long id, ProdutoDto produtoDto);
-    List<Produto> getProdutos();
-    List<Produto> getProdutosByMarca(String marca);
-    List<Produto> obterProdutosByCategoria(String categoria);
+    List<Produto> getAllProdutos();
+    List<Produto> getProdutosAtivosByMarca(String marca);
+    List<Produto> getProdutosAtivosByCategoria(String categoria);
     void deleteProduto(Long id);
 }

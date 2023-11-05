@@ -10,8 +10,8 @@ public record ProdutoDto(
         String nome,
         @DecimalMin(value = "0.0", inclusive = false, message = "O campo 'preco' é obrigatório e deve ser válido")
         double preco,
-        @NotNull(message = "O campo 'disponivel' é obrigatório e não pode estar em branco")
-        boolean disponivel,
+        // Nao eh obrigatorio, default ´false´
+        boolean ativo,
         @NotBlank(message = "O campo 'marca' é obrigatório e não pode estar em branco")
         String marca,
         @NotBlank(message = "O campo 'categoria' é obrigatório e não pode estar em branco")
@@ -21,7 +21,7 @@ public record ProdutoDto(
                 return new Produto(
                         this.nome(),
                         this.preco(),
-                        this.disponivel(),
+                        this.ativo(),
                         this.marca(),
                         this.categoria()
                 );
